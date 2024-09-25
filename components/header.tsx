@@ -2,8 +2,7 @@
 
 // header for landing page
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faLinkedin, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { useEffect, useState } from 'react';
+import { faTwitter, faLinkedin, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 const Header: React.FC = () => {
