@@ -1,4 +1,4 @@
-const Topper = () => {
+const Topper: React.FC = () => {
     return (
         <div className="flex flex-col jusitfy-center">
             <div className="flex flex-col items-center justify-center gap-y-2">

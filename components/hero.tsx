@@ -1,7 +1,7 @@
 import { faDownload, faEnvelope, faLink, faLocation, faMailBulk, faNetworkWired, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Hero = () => {
+const Hero:React.FC = () => {
     return (
         <div id="hero" className="bg-bg1 w-full min-h-full py-20 pb-[6.5rem] hero-break:pb-20 px-10">
             <div className="w-full min-h-full bg-bg1 mt-5 overflow-hidden flex flex-col-reverse hero-break:flex-row items-center justify-center gap-y-14 flex-wrap-reverse gap-x-14">
@@ -29,7 +29,7 @@ const Hero = () => {
                     <h1 className="text-prmry2 text-[4rem] hero-break:text-[6rem] mb-10 hero-break:mb-14 bg-green-00">Developer</h1>
                     <div className="mb-0 text-[2rem]">
                         <div className="text-prmry2 text-sm">{`<h1>`}</div>
-                        <div className="ml-8">Hey</div>
+                        <div className="ml-8">Hey<span className="text-prmry1">!</span></div>
                         <div className="ml-8"> {`I'm`} <span className="text-prmry1">Khalid</span>,</div>
                         <div className="ml-8"> A Full-Stack Web Developer</div>
                         <div className="text-prmry2 text-sm">{`</h1>`}</div>

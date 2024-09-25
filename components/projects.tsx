@@ -3,11 +3,11 @@
 import Topper from "./topper";
 import TopperText from "./topper-text";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faForward } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import Image from 'next/image';
 
-const Projects = () => {
+const Projects: React.FC = () => {
     const carouselRef = useRef(null);
     const [current, setCurrent] = useState(0);
 
@@ -39,27 +39,27 @@ const Projects = () => {
 
 
     return (
-        <div id="projects" className="relative bg-bg1 w-full bg-opacity-20">
+        <div id="projects" className="relative bg-bg1 w-full">
             <div className="py-20">
                 <Topper />
                 <TopperText
                     head={'Projects'}
                     note={'I am actively learning and improving'}
                 />
-                <div className="w-full flex flex-col gap-y-2 items-center justify-center gap-x-10 mt-16">
-                    <div className="max-w-[50rem] relative overflow-hidden px-20">
+                <div className="w-full flex flex-col gap-y-6 items-center justify-center gap-x-10  -mt-4 project-break:mt-10">
+                    <div className="max-w-[52rem] w-full relative overflow-hidden px-10 project-break:px-20">
                         <div
                             ref={carouselRef}
-                            className="max-[800px] mx-auto flex justify-start items-stretch  mt-10  relative overflow-hidden"
+                            className="w-full mx-auto flex justify-start items-stretch mt-10 relative overflow-hidden"
                         >
                             {members.map((_, index) => (
                                 <Member key={index} />
                             ))}
                         </div>
-                        <button className="left-bt absolute top-[50%] left-[-10px] md:left-0 z-10 bg-prmry2 bg-opacity-20 p-2 w-14 h-14 rounded-full flex justify-center items-center" onClick={leftScroll}>
+                        <button className="hidden project-break:flex left-bt absolute top-[50%] left-[-10px] md:left-3 z-10 bg-prmry2 bg-opacity-20 p-2 w-14 h-14 rounded-full justify-center items-center" onClick={leftScroll}>
                             <FontAwesomeIcon icon={faArrowLeft} className="h-4 w-4 text-prmry2" />
                         </button>
-                        <button className="right-bt absolute top-[50%] right-[-10px] md:right-0 z-10 bg-prmry2 bg-opacity-20 p-2 w-14 h-14 rounded-full flex justify-center items-center" onClick={rightScroll}>
+                        <button className="hidden project-break:flex absolute top-[50%] right-[-10px] md:right-3 z-10 bg-prmry2 bg-opacity-20 p-2 w-14 h-14 rounded-full justify-center items-center" onClick={rightScroll}>
                             <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 text-prmry2" />
                         </button>
                     </div>
@@ -73,35 +73,42 @@ const Projects = () => {
                             ></button>
                         ))}
                     </div>
+                    <div className="project-break:hidden flex items-center justify-center gap-4 -mb-14">
+                        <button className="bg-prmry2 bg-opacity-20 p-2 w-14 h-14 rounded-full flex justify-center items-center" onClick={leftScroll}>
+                            <FontAwesomeIcon icon={faArrowLeft} className="h-4 w-4 text-prmry2" />
+                        </button>
+                        <button className="bg-prmry2 bg-opacity-20 p-2 w-14 h-14 rounded-full flex justify-center items-center" onClick={rightScroll}>
+                            <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 text-prmry2" />
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
 
-const Member = () => {
+const Member: React.FC = () => {
     return (
-        <div className="w-full flex-shrink-0 flex items-stretch justify-center flex-wrap gap-x-4">
-            <div className="w-[21rem] h-full rounded-xl">
+        <div className="w-full flex-shrink-0 flex items-center flex-wrap-reverse justify-center gap-x-4">
+            <div className="w-[20rem] rounded-x">
                 <Image alt='project image' height={500} width={500} src={`/lifestyleleverage.png`} className="rounded-xl w-full h-full" />
             </div>
-            <div className="w-[15rem] py-5">
+            <div className="max-w-[15rem] py-5">
                 <div className="text-center pt-4">
-                    <a href="" className="border-b-[2px] border-b-white text-prmry1 text-[1.25rem]">
-                        Visit Website  <FontAwesomeIcon icon={faLink} className="w-2 h-2" />
+                    <a href="" className="border-b-[1px] border-b-white text-blue-300 text-[1.2rem]">
+                        Visit Website  <FontAwesomeIcon icon={faForward} className="w-2 h-2" />
                     </a>
                 </div>
-                <p className="leading-[2rem]">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, totam sapiente? Iure asperiores libero cupiditate iusto provident ipsa dignissimos
-                    quia? Ex at dolorem porro facilis necessitatibus obcaecati quidem nam voluptatibus!
+                <p className="leading-[1.5rem] text-sm">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. sit amet consectetur adipisicing elit.
                 </p>
             </div>
         </div>
     );
 };
 
-const members = [1, 2, 3, 5, 6, 7, 8, 9, 10];
+const members = [1, 1];
 
 
 export default Projects;

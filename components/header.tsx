@@ -9,8 +9,8 @@ import { useEffect, useState } from 'react';
 const Header: React.FC = () => {
     return (
         <>
-            <header className='z-50 fixed w-full p-3 pt-0 flex items-center justify-center'>
-                <div className='max-w-screen-xl bg-bg1 border-b-[2px] border-b-grey w-full px-5 py-3 flex justify-between items-center h-16'>
+            <header className='z-50 fixed w-full pt-0 flex items-center justify-center bg-bg1'>
+                <div className='max-w-screen-xl p-4 bg-bg1 border-b-[2px] border-b-grey w-full px-5 py-3 flex justify-between items-center h-16'>
                     <span className='inline-flex items-center gap-1 max-w-lg'>
                         <span className='text-prmry1  text-[2rem]'>{`<`}</span> <span className=''>CodeNoJutsu</span> <span className='text-prmry1 text-[2rem]'>{`/>`}</span>
                     </span>

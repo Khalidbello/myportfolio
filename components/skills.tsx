@@ -5,10 +5,10 @@ import { faDatabase, faDesktop, faLeaf, faMobile, faServer, faWind } from "@fort
 import { faCss3, faHtml5, faJs, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
 
-const Skills = () => {
+const Skills: React.FC = () => {
     return (
-        <div id="skills" className="relative bg-bg2 w-full bg-opacity-50">
-            <Image alt="About pattern iamge" src={'/code-bg.jpeg'} width={500} height={500} className="-z-[1] absolute top-0 heght-0 w-full h-full opacity-15" />
+        <div id="skills" className="relative bg-bg2 w-full bg-opacity-90">
+            <Image alt="About pattern iamge" src={'/code-bg.jpeg'} width={500} height={500} className="-z-[1] absolute top-0 heght-0 w-full h-full" />
             <div className="py-20">
                 <Topper />
                 <TopperText

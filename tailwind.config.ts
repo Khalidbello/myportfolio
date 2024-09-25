@@ -23,7 +23,8 @@ const config: Config = {
       screens: {
         'hero-break': '1200px',
         'nav-switch': '880px',
-        'about-break': '1025px'
+        'about-break': '1025px',
+        'project-break': '780px',
       }
     },
   },
