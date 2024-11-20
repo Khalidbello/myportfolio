@@ -88,7 +88,7 @@ const SocialLinks: React.FC<{
           Twitter
         </a>
         <a
-          href="https://www.linkdin.com/khalid-bello-322362237"
+          href="https://www.linkedin.com/in/khalid-bello-322362237"
           className="flex items-center justify-center text-gray-200 text-xs hover:text-prmry1"
         >
           <FontAwesomeIcon
