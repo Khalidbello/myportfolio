@@ -53,6 +53,8 @@ const SocialLinks: React.FC<{
   eleRef: MutableRefObject<HTMLDivElement | null>;
   show: React.MouseEventHandler<HTMLButtonElement>;
 }> = ({ eleRef, show }) => {
+  const encodedNumber = encodeURIComponent("08188146243");
+
   return (
     <div className="fixed top-0 right-0 bg-gray-50">
       <div
@@ -66,8 +68,8 @@ const SocialLinks: React.FC<{
           />
         </button>
         <a
-          href="/#"
-          className="flex items-center justify-center text-gray-200 text-xs"
+          href={`https://wa.me/${encodedNumber}`}
+          className="flex items-center justify-center text-gray-200 text-xs hover:text-prmry1"
         >
           <FontAwesomeIcon
             icon={faWhatsapp}
@@ -76,8 +78,8 @@ const SocialLinks: React.FC<{
           Whatsapp
         </a>
         <a
-          href="/#"
-          className="flex items-center justify-center text-gray-200 text-xs"
+          href="https://x.com/codenojutsu"
+          className="flex items-center justify-center text-gray-200 text-xs hover:text-prmry1"
         >
           <FontAwesomeIcon
             icon={faTwitter}
@@ -86,8 +88,8 @@ const SocialLinks: React.FC<{
           Twitter
         </a>
         <a
-          href="/#"
-          className="flex items-center justify-center text-gray-200 text-xs"
+          href="https://www.linkdin.com/khalid-bello-322362237"
+          className="flex items-center justify-center text-gray-200 text-xs hover:text-prmry1"
         >
           <FontAwesomeIcon
             icon={faLinkedin}
@@ -96,8 +98,8 @@ const SocialLinks: React.FC<{
           LinkedIn
         </a>
         <a
-          href="/#"
-          className="flex items-center justify-center text-gray-200 text-xs"
+          href="https://github.com/khalidbello"
+          className="flex items-center justify-center text-gray-200 text-xs hover:text-prmry1"
         >
           <FontAwesomeIcon
             icon={faGithub}
