@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           />
         </a>
         <a
-          href="https://www.linkedin.com/khalid-bello-322362237"
+          href="https://www.linkedin.com/in/khalid-bello-322362237"
           className="flex items-center justify-center text-gray-200 text-xs"
         >
           <FontAwesomeIcon
