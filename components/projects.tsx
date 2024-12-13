@@ -149,19 +149,14 @@ const Member: React.FC<{
 
 const members = [
   {
+    image: "/botsub.png",
+    link: "https://botsub.vercel.app",
+    info: "BotSub, a saas product i built to eliminate the 'Please hotspot me let me Sub', make data and airtime purchase easy.",
+  },
+  {
     image: "/lifestyleleverage.png",
     link: "https://lifestyleleverage.com.ng",
     info: "An e-learning site i built for a client, who got tired of the old fashioned whatsaap classes",
-  },
-  {
-    image: "/botsub-inspire.jpg",
-    link: "https://botsub.vercel.app",
-    info: "My saas product, a facebook that enables customers to purchase data even when they are totally out of data leverging facebook freemode",
-  },
-  {
-    image: "/lifestyleleverage.png",
-    link: "https://lifestyleleverage.com.ng",
-    info: " Lorem ipsum dolor, sit amet consectetur adipisicing elit. sit amet",
   },
 ];
 
