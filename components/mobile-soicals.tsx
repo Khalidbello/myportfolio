@@ -64,7 +64,7 @@ const SocialLinks: React.FC<{
         <button className="absolute top-2 right-2" onClick={show}>
           <FontAwesomeIcon
             icon={faCaretRight}
-            className="text-prmry1 w-[0.8rem] h-[0.8rem] "
+            className="text-prmry1 w-[1rem] h-[1rem] mr-2"
           />
         </button>
         <a
