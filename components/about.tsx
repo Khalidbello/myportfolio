@@ -45,8 +45,8 @@ const About: React.FC = () => {
               <div className="ml-3">
                 <div className="text-[2rem] text-prmry1">Hello!</div>
                 <p className="p-0 m-0">
-                  {`I'm`} I'm Khalid Bello, a mechanical engineering student
-                  turned passionate web developer, driven by a love for solving
+                  {`I'm`} Khalid Bello, a mechanical engineering student turned
+                  passionate web developer, driven by a love for solving
                   problems and creating value. Leveraging my analytical skills,
                   I transform complex business challenges into practical,
                   user-focused solutions. With expertise in both front-end and
