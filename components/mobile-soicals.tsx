@@ -27,7 +27,9 @@ const Socials: React.FC = () => {
     e: React.MouseEvent<HTMLButtonElement>
   ) => {
     e.stopPropagation();
-    if (socialNavRef.current) socialNavRef.current.style.right = "-20rem";
+    setTimeout(() => {
+      if (socialNavRef.current) socialNavRef.current.style.right = "-20rem";
+    }, 250);
     if (mNavRef.current) mNavRef.current.style.backgroundColor = "#292936";
   };
 
@@ -61,10 +63,10 @@ const SocialLinks: React.FC<{
         ref={eleRef}
         className="fixed top-0 -right-[20rem] transition-all pt-10 flex flex-col items-start justify-start gap-y-4 px-3 py-4 bg-bg1 rounded-l-xl border-grey border-[1px]"
       >
-        <button className="absolute top-2 right-2" onClick={show}>
+        <button className="absolute top-2 right-3" onClick={show}>
           <FontAwesomeIcon
             icon={faCaretRight}
-            className="text-prmry1 w-[1rem] h-[1rem] mr-2"
+            className="text-prmry1 w-[1.5rem] h-[1.5rem] mr-2"
           />
         </button>
         <a

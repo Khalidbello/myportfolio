@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
               ></textarea>
             </div>
             {error && (
-              <p className="text-red-500 text-sm text-center">{error}</p>
+              <p className="text-red-500 text-sm text-center mb-2">{error}</p>
             )}
             <div className="flex items-center justify-center">
               <button className="px-4 py-2 rounded-full bg-prmry1 text-gray-800 flex items-center justify-center gap-3">
