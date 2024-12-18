@@ -80,13 +80,17 @@ const Hero: React.FC = () => {
             </span>
           </div>
           <div className="text-left">
-            <button className="flex justify-center items-center gap-x-3 bg-white text-gray-800 py-2 px-4 rounded-l-full rounded-r-full">
-              Doownload Cv{" "}
+            <a
+              download
+              href="/resume.pdf"
+              className="flex justify-center items-center gap-x-3 bg-white text-gray-800 py-2 px-4 rounded-l-full rounded-r-full hover:shadow-cyan-800 shadow-lg"
+            >
+              Download Cv{" "}
               <FontAwesomeIcon
                 icon={faDownload}
                 className="w-4 h-4 text-gray-800"
               />
-            </button>
+            </a>
           </div>
         </div>
         <div className="w-full max-w-[40em]">
@@ -116,7 +120,7 @@ const Hero: React.FC = () => {
           <button
             ref={btRef}
             onClick={handleLetsTalk}
-            className="flex items-center jusitfy-center gap-3 text-[1rem] text-prmry1 pl-8"
+            className="flex items-center jusitfy-center gap-3 text-[1rem] text-prmry1 pl-8 hover:text-cyan-800"
           >
             {`Let's Talk`}{" "}
             <FontAwesomeIcon
