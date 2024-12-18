@@ -59,13 +59,15 @@ const About: React.FC = () => {
               <div className="text-prmry2">{`<p>`}</div>
             </div>
           </div>
-          <div className="bg-gray-900 w-full max-w-[30rem] about-break:min-w-[18rem]  rounded-xl">
+          <div className="relative bg-gray-900 w-full max-w-[30rem] about-break:min-w-[18rem]  rounded-xl">
             <Image
-              src={"/work-space.jpeg"}
-              alt="work space"
+              src={"/h-art.png"}
+              alt="art by historia
+              "
               width={500}
               height={500}
-              className="w-full h-full rounded-xl"
+              className="w-full h-full rounded-xl opacity-50"
+              // style={{ objectFit: "cover" }}
             />
           </div>
         </div>
