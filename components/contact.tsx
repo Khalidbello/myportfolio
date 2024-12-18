@@ -1,3 +1,5 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Topper from "./topper";
 import TopperText from "./topper-text";
@@ -16,6 +18,7 @@ const Contact: React.FC = () => {
   const onChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    showError("");
     const { name, value } = e.target;
 
     setFormData((prevData) => ({
@@ -94,6 +97,9 @@ const Contact: React.FC = () => {
                 className="h-[3.5rem] w-full px-4 py-1 bg-transparent border-b-[2px] border-b-prmry2 text-sm"
               ></textarea>
             </div>
+            {error && (
+              <p className="text-red-500 text-sm text-center">{error}</p>
+            )}
             <div className="flex items-center justify-center">
               <button className="px-4 py-2 rounded-full bg-prmry1 text-gray-800 flex items-center justify-center gap-3">
                 Send{" "}
