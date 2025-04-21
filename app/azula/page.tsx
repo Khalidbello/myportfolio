@@ -27,9 +27,10 @@ const Azula = () => {
               Get Azula
             </button>
           </div>
-          <div className=" col-span-8 md:col-start-5 md:col-span-4 bg-green-100 h-[28rem] rounded-xl">
+          <div className=" col-span-8 md:col-start-5 md:col-span-4 bg-green-100 h-[22rem] md:h-[28rem] rounded-xl">
             <Spline scene="https://prod.spline.design/bqlWgGwP1LzbQBTE/scene.splinecode" />
           </div>
+          18re
         </div>
 
         <div className="how-azula-works">
@@ -40,7 +41,7 @@ const Azula = () => {
           </h2>
 
           <div className="grid grid-cols-8 gap-x-6 mb-10">
-            <div className="col-span-4  flex flex-col items-start justify-center">
+            <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <svg
                   className="w-8 h-8 mr-3 text-green-700"
@@ -64,7 +65,7 @@ const Azula = () => {
                 charcoal to your food, not the surroundings.
               </p>
             </div>
-            <div className="col-start-5 col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
           <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
@@ -82,7 +83,7 @@ const Azula = () => {
                 combustion.
               </p>
             </div>
-            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
           <div className="grid grid-cols-8 gap-x-6 mb-10">
@@ -99,7 +100,7 @@ const Azula = () => {
                 Dual air vents for a more fuel efficient burning
               </p>
             </div>
-            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
           <div className="grid grid-cols-8 gap-x-6 mb-10">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
@@ -115,7 +116,7 @@ const Azula = () => {
                 Dual air vents for a more fuel efficient burning
               </p>
             </div>
-            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
         </div>
       </div>
