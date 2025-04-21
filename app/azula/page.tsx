@@ -16,10 +16,10 @@ const Azula = () => {
       <div className="w-full bg-cyan-50 text-gray-700 py-20 px-8 max-w-7xl mx-auto">
         <div className="hero grid grid-cols-8 gap-x-6 gap-y-12 mb-20">
           <div className="col-start-1 col-span-8 md:col-span-4 flex flex-col items-start justify-center gap-5">
-            <h1 className="font-mono text-3xl">
+            <h1 className="font-mono text-2xl md:text-3xl">
               Cook Faster, Spend Less with Azula
             </h1>
-            <p className="p-0">
+            <p className="p-0 text-sm md:text-base">
               Azula optimized design burns hotter, wastes less, and cuts
               charcoal use by 70%—so you save money with every meal.
             </p>
@@ -34,14 +34,14 @@ const Azula = () => {
 
         <div className="how-azula-works">
           <h2 className="text-center mb-10 text-green-800">
-            <span className="border-l-4 border-green-800 p-2">
+            <span className="border-l-4 border-yellow-500 p-2">
               How Azula enables you to cook <b>Better!!!</b>
             </span>
           </h2>
 
           <div className="grid grid-cols-8 gap-x-6 mb-10">
             <div className="col-span-4  flex flex-col items-start justify-center">
-              <h2 className="text-2xl mb-4 text-green-700">
+              <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <svg
                   className="w-8 h-8 mr-3 text-green-700"
                   fill="currentColor"
@@ -67,9 +67,9 @@ const Azula = () => {
             <div className="col-start-5 col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
-          <div className="grid grid-cols-8 gap-x-6 mb-10">
-            <div className="col-span-4  flex flex-col items-start justify-center">
-              <h2 className="text-2xl mb-4 text-green-700 ">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
+            <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
+              <h2 className="text-xl md:text-2xl mb-4 text-green-700 ">
                 <FontAwesomeIcon
                   icon={faTemperatureHigh}
                   className="text-red-400 h-8"
@@ -82,12 +82,12 @@ const Azula = () => {
                 combustion.
               </p>
             </div>
-            <div className="col-start-5 col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
           <div className="grid grid-cols-8 gap-x-6 mb-10">
-            <div className="col-span-4  flex flex-col items-start justify-center">
-              <h2 className="text-2xl mb-4 text-green-700">
+            <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
+              <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <FontAwesomeIcon
                   icon={faHurricane}
                   className="text-blue-500 h-8 -rotate-90"
@@ -99,11 +99,11 @@ const Azula = () => {
                 Dual air vents for a more fuel efficient burning
               </p>
             </div>
-            <div className="col-start-5 col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
           </div>
           <div className="grid grid-cols-8 gap-x-6 mb-10">
-            <div className="col-span-4  flex flex-col items-start justify-center">
-              <h2 className="text-2xl mb-4 text-green-700">
+            <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
+              <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <FontAwesomeIcon
                   icon={faRefresh}
                   className="text-green-500 h-6 -rotate-90"
@@ -115,7 +115,7 @@ const Azula = () => {
                 Dual air vents for a more fuel efficient burning
               </p>
             </div>
-            <div className="col-start-5 col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
+            <div className="col-span-8 md:col-start-5 md:col-span-4 h-[25rem] bg-green-200 rounded-md"></div>
           </div>
         </div>
       </div>
