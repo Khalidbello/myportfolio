@@ -39,7 +39,7 @@ const Azula = () => {
             </span>
           </h2>
 
-          <div className="grid grid-cols-8 gap-x-6 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <svg
@@ -85,7 +85,7 @@ const Azula = () => {
             <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
-          <div className="grid grid-cols-8 gap-x-6 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <FontAwesomeIcon
@@ -101,7 +101,7 @@ const Azula = () => {
             </div>
             <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
-          <div className="grid grid-cols-8 gap-x-6 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <FontAwesomeIcon
