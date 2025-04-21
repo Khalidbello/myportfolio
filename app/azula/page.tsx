@@ -30,7 +30,6 @@ const Azula = () => {
           <div className=" col-span-8 md:col-start-5 md:col-span-4 bg-green-100 h-[22rem] md:h-[28rem] rounded-xl">
             <Spline scene="https://prod.spline.design/bqlWgGwP1LzbQBTE/scene.splinecode" />
           </div>
-          18re
         </div>
 
         <div className="how-azula-works">
