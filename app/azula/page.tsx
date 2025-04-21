@@ -33,13 +33,13 @@ const Azula = () => {
         </div>
 
         <div className="how-azula-works">
-          <h2 className="text-center mb-10 text-green-800">
+          <h2 className="text-center mb-14 text-green-800">
             <span className="border-l-4 border-yellow-500 p-2">
               How Azula enables you to cook <b>Better!!!</b>
             </span>
           </h2>
 
-          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <svg
@@ -67,7 +67,7 @@ const Azula = () => {
             <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
-          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700 ">
                 <FontAwesomeIcon
@@ -85,7 +85,7 @@ const Azula = () => {
             <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
 
-          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <FontAwesomeIcon
@@ -101,7 +101,7 @@ const Azula = () => {
             </div>
             <div className="col-span-8 md:col-start-5 md:col-span-4 h-[20rem] md:h-[25rem] bg-green-200 rounded-md"></div>
           </div>
-          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-10">
+          <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12">
             <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
               <h2 className="text-xl md:text-2xl mb-4 text-green-700">
                 <FontAwesomeIcon
