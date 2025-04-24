@@ -1,11 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faArrowRight,
-  faForward,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import Image from "next/image";
 
@@ -41,7 +37,7 @@ export default function CustomerReview() {
   };
 
   return (
-    <div className="bg-green-700 py-8 mx-4 rounded-2xl">
+    <div className="bg-cyan-700 py-8 mx-4 rounded-2xl">
       <div className="mb-10">
         <div className="flex flex-col jusitfy-center mb-8">
           <div className="flex flex-col items-center justify-center gap-y-2">
@@ -142,11 +138,11 @@ const Member: React.FC<{
 }> = ({ data }) => {
   return (
     <div className="w-full flex-shrink-0 grid grid-col-10 gap-x-4 gap-y-4 justify-items-center">
-      <p className="h-auto bg-green-600 bg-opacity-30 text-green-100 min-h-[16rem] font-serif leading-8 rounded-xl p-3 sm:order-2 sm:col-start-5 sm:col-span-6 py-5">
+      <p className="h-auto bg-cyan-600 bg-opacity-30 text-cyan-100 min-h-[16rem] font-serif leading-8 rounded-xl p-3 sm:order-2 sm:col-start-5 sm:col-span-6 py-5">
         {data.review}{" "}
       </p>
 
-      <div className="sm:order-1 sm:col-span-4 w-full flex items-center justify-start gap-x-2 text-green-100">
+      <div className="sm:order-1 sm:col-span-4 w-full flex items-center justify-start gap-x-2 text-cyan-100">
         <Image
           src={data.image}
           alt="reviewer image"
@@ -165,17 +161,38 @@ const Member: React.FC<{
 
 const members = [
   {
-    name: "Mama Hadizah",
     image: "/botsub.png",
-    occupation: "Food vendor",
+    name: "Amara Okafor",
+    occupation: "Teacher",
     review:
-      "BotSub, a saas product i built to eliminate the 'Please hotspot me let me Sub', make data and airtime purchase easy.",
+      "Azula has been a game-changer for my family. It cooks meals so much faster and uses way less charcoal. I save money and still enjoy tasty dishes!",
   },
   {
-    name: "Nana",
-    image: "/lifestyleleverage.png",
-    occupation: "House Wife",
+    image: "/botsub.png",
+    name: "Tunde Adewale",
+    occupation: "Chef",
     review:
-      "An e-learning site i built for a client, who got tired of the old fashioned whatsaap classes",
+      "As a professional chef, I value efficiency. Azula not only cooks quickly but also maintains consistent heat. A fantastic addition to any kitchen!",
+  },
+  {
+    image: "/botsub.png",
+    name: "Ngozi Eze",
+    occupation: "Entrepreneur",
+    review:
+      "Azula is both economical and environmentally friendly. I’ve noticed a significant reduction in the amount of charcoal I use, which saves me money every month.",
+  },
+  {
+    image: "/botsub.png",
+    name: "Ibrahim Musa",
+    occupation: "Mechanic",
+    review:
+      "I was skeptical at first, but Azula has exceeded my expectations. It’s easy to use and helps me prepare meals for my family much faster.",
+  },
+  {
+    image: "/botsub.png",
+    name: "Fatima Bello",
+    occupation: "Student",
+    review:
+      "I love Azula! It’s perfect for quick cooking, and I don’t have to spend as much money on charcoal. Plus, it’s better for the environment, which is important to me.",
   },
 ];
