@@ -33,7 +33,7 @@ export default function HowAzulaWorks() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12 px-8">
+      <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12">
         <div className="col-span-8 md:col-span-4 flex flex-col items-start justify-center">
           <h2 className="flex items-center justify-start gap-x-3 text-xl md:text-2xl mb-4 text-green-700">
             <span className="bg-blue-100 p-2 pr-0 rounded-md inline-flex items-center justify-center">

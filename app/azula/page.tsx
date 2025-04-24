@@ -12,7 +12,7 @@ const Azula = () => {
       <div className="w-full bg-cyan-50 text-gray-700 pt-24 pb-16 max-w-7xl mx-auto">
         <div className="hero grid grid-cols-8 gap-x-6 gap-y-12 mb-20 px-8">
           <div className="col-start-1 col-span-8 md:col-span-4 flex flex-col items-start justify-center gap-5">
-            <h1 className="font-mono font-semibold text-green-700 text-3xl sm:text-4xl md:text-5xl">
+            <h1 className="font-mono font-bold md:font-semibold text-green-700 text-3xl sm:text-4xl md:text-5xl">
               Cook Cheaper And Faster with Azula
             </h1>
             <p className="p-0 text-sm md:text-base">
