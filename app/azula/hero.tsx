@@ -28,13 +28,14 @@
 import { useEffect, useRef, useState } from "react";
 import Spline from "@splinetool/react-spline";
 
-// Debounce function with TypeScript typing
-function debounce<T extends (...args: any[]) => void>(
-  func: T,
+// Properly typed debounce function without 'any'
+function debounce<Args extends unknown[]>(
+  func: (...args: Args) => void,
   wait: number
-): (...args: Parameters<T>) => void {
+): (...args: Args) => void {
   let timeout: NodeJS.Timeout;
-  return function executedFunction(...args: Parameters<T>) {
+
+  return (...args: Args) => {
     const later = () => {
       clearTimeout(timeout);
       func(...args);
