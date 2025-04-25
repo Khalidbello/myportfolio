@@ -6,10 +6,12 @@ import Skills from "@/components/skills";
 import Contact from "@/components/contact";
 import SideNav from "@/components/side-nav";
 import Footer from "@/components/footer";
+import HeroSection from "./azula/test-hedaer";
 
 const Portfolio = () => {
   return (
     <div className="w-full h-full bg-bg1 relative text-gray-200">
+      <HeroSection />
       <Header />
       <Hero />
       <About />
@@ -21,6 +23,5 @@ const Portfolio = () => {
     </div>
   );
 };
-
 
 export default Portfolio;

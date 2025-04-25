@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Spline from "@splinetool/react-spline";
-import { motion } from "framer-motion";
 
 function debounce<Args extends unknown[]>(
   func: (...args: Args) => void,
@@ -19,7 +18,7 @@ function debounce<Args extends unknown[]>(
   };
 }
 
-export default function Hero() {
+export default function HeroS() {
   const [isVisible, setIsVisible] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const splineContainerRef = useRef<HTMLDivElement>(null);
@@ -104,60 +103,28 @@ export default function Hero() {
   }, [isVisible, hasLoaded]);
 
   return (
-    <div className="hero grid grid-cols-8 gap-x-6 gap-y-8 px-8 min-h-[80vh]  items-center justify-center md:pt-32 pt-20 pb-16">
-      <div className="col-start-1 col-span-8 md:col-span-4 flex flex-col items-start justify-center gap-5 ">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl font-bold leading-tight text-green-900 sm:text-5xl lg:text-6xl"
-        >
-          Cook <span className="text-green-600">Cheaper</span> And{" "}
-          <span className="text-green-600">Faster</span> with Azula
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 text-lg text-gray-700 md:text-xl"
-        >
-          Africas most efficient charcoal stove engineered to save time, money,
-          and combat global warming.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-8 flex flex-col gap-4 sm:flex-row"
-        >
-          <button className="rounded-lg bg-green-600 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
-            Get Azula Now
-          </button>
-          <button className="rounded-lg border-2 border-green-600 px-8 py-3 text-lg font-semibold text-green-600 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
-            How It Works →
-          </button>
-        </motion.div>
+    <div className="hero grid grid-cols-8 gap-x-6 gap-y-12 mb-20 px-8">
+      <div className="col-start-1 col-span-8 md:col-span-4 flex flex-col items-start justify-center gap-5">
+        <h1 className="font-mono font-bold md:font-semibold text-green-700 text-3xl sm:text-4xl md:text-5xl">
+          Cook Cheaper And Faster with Azula
+        </h1>
+        <p className="p-0 text-sm md:text-base">
+          {"Africa's"} most efficient charcoal stove engineered to save time,
+          money and combat global warming.
+        </p>
+        <button className="px-6 py-3 bg-green-700 text-white font-semibold rounded-full">
+          Get Azula
+        </button>
       </div>
-
-      {/* Image/3D Model */}
       <div
         ref={splineContainerRef}
         className="col-span-8 md:col-start-5 md:col-span-4 bg-green-100 h-[22rem] md:h-[28rem] rounded-xl"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative aspect-square w-full h-full"
-        >
-          {isVisible && hasLoaded && (
-            <div className="w-full h-[22rem] md:h-[28rem] rounded-xl">
-              <Spline scene={SCENE_URL} />
-            </div>
-          )}
-        </motion.div>
+        {isVisible && hasLoaded && (
+          <div className="w-full h-full rounded-xl">
+            <Spline scene={SCENE_URL} />
+          </div>
+        )}
       </div>
     </div>
   );
