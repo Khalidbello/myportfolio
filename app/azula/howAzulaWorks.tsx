@@ -75,7 +75,7 @@ const FeatureCard = ({
   }, [splineScene]);
 
   return (
-    <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-12">
+    <div className="grid grid-cols-8 gap-x-6 gap-y-8 mb-20">
       <div
         className={`col-span-8 ${
           imagePosition === "right"
@@ -137,7 +137,7 @@ export default function HowAzulaWorks() {
       </div>
 
       {/* Section title */}
-      <div className="flex flex-col justify-center items-center relative mb-8 mt-6">
+      <div className="flex flex-col justify-center items-center relative mb-14 mt-6">
         <h2 className="relative inline-block text-green-700 sm:text-xl md:text-2xl font-medium md:font-bold text-center border-b-[1px] border-b-green-700">
           <span className="px-4">How Azula Makes You Cook Better!!!</span>
           <div className="w-[10px] h-[10px] rounded-full absolute -bottom-[5px] left-0 bg-green-700"></div>
