@@ -1,4 +1,4 @@
-//"use client";
+"use client";
 
 import React from "react";
 import CustomerReview from "./custoemerReview";
@@ -11,10 +11,11 @@ import Navbar from "./nav";
 const Azula = () => {
   return (
     <div className="w-full h-screen bg-white overflow-auto">
+      <Navbar />
       <div className="w-full bg-cyan-50 text-gray-700 max-w-7xl mx-auto">
-        <Navbar />
         {/* <HeroSection /> */}
         <Hero />
+
         <HowAzulaWorks />
         <CustomerReview />
         <FAQSection />

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,59 +23,14 @@ export default function Navbar() {
         scrolled ? "bg-white shadow-md py-2" : "bg-white/90 py-4"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
             <span className="text-2xl font-bold text-green-700">AZULA</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="#features"
-              className="text-gray-700 hover:text-green-600 transition font-medium"
-            >
-              Features
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="text-gray-700 hover:text-green-600 transition font-medium"
-            >
-              How It Works
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-gray-700 hover:text-green-600 transition font-medium"
-            >
-              Testimonials
-            </Link>
-            <Link
-              href="#faq"
-              className="text-gray-700 hover:text-green-600 transition font-medium"
-            >
-              FAQ
-            </Link>
-            <div className="flex items-center space-x-4 ml-4">
-              <Link
-                href="#buy"
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition shadow hover:shadow-lg"
-              >
-                Buy Now
-              </Link>
-              <Link
-                href="#cart"
-                className="text-gray-700 hover:text-green-600 relative"
-              >
-                <FaShoppingCart className="text-xl" />
-                <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  0
-                </span>
-              </Link>
-            </div>
-          </div>
+          <DesktopNavigation />
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-700 focus:outline-none"
@@ -88,11 +44,73 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden ${
-            isOpen ? "block" : "hidden"
-          } transition-all duration-300`}
+        <MobileNavBar isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
+    </nav>
+  );
+}
+
+const DesktopNavigation = () => {
+  return (
+    <div className="hidden  md:flex items-center space-x-8">
+      <Link
+        href="#features"
+        className="text-gray-700 hover:text-green-600 transition font-medium"
+      >
+        Features
+      </Link>
+      <Link
+        href="#how-it-works"
+        className="text-gray-700 hover:text-green-600 transition font-medium"
+      >
+        How It Works
+      </Link>
+      <Link
+        href="#testimonials"
+        className="text-gray-700 hover:text-green-600 transition font-medium"
+      >
+        Testimonials
+      </Link>
+      <Link
+        href="#faq"
+        className="text-gray-700 hover:text-green-600 transition font-medium"
+      >
+        FAQ
+      </Link>
+      <div className="flex items-center space-x-4 pl-[7rem]">
+        <Link
+          href="#buy"
+          className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition shadow hover:shadow-lg"
+        >
+          Buy Now
+        </Link>
+        <Link
+          href="#cart"
+          className="text-gray-700 hover:text-green-600 relative"
+        >
+          <FaShoppingCart className="text-xl" />
+          <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+            0
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const MobileNavBar: React.FC<{
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ isOpen, setIsOpen }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ height: 0 }}
+          animate={{ height: "auto" }}
+          exit={{ height: 0 }}
+          transition={{ duration: 0.6 }}
+          className={"md:hidden overflow-hidden"}
         >
           <div className="pt-4 pb-8 space-y-4">
             <Link
@@ -143,8 +161,8 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-    </nav>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
-}
+};
