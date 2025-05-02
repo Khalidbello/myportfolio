@@ -10,8 +10,8 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-white px-2 py-2 rounded-xl mx-2 my-2">
+      <div className="max-w-7xl mx-auto p-2">
+        <div className="bg-white px-2 py-2 rounded-xl">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold text-green-700">AZULA</span>
