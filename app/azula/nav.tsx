@@ -9,29 +9,31 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 bg-white`}>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-green-700">AZULA</span>
-          </Link>
+    <nav className={`fixed w-full z-50 transition-all duration-300`}>
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-white px-2 py-2 rounded-xl mx-2 my-2">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center">
+              <span className="text-2xl font-bold text-green-700">AZULA</span>
+            </Link>
 
-          <DesktopNavigation />
+            <DesktopNavigation />
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700 focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <FaTimes className="text-2xl" />
-            ) : (
-              <FaBars className="text-2xl" />
-            )}
-          </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-gray-700 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <FaTimes className="text-2xl" />
+              ) : (
+                <FaBars className="text-2xl" />
+              )}
+            </button>
+          </div>
+
+          <MobileNavBar isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-
-        <MobileNavBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </nav>
   );
