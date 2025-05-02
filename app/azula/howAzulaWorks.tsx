@@ -120,7 +120,7 @@ export default function HowAzulaWorks() {
   };
 
   return (
-    <div className="how-azula-works px-8 pb-12">
+    <div className="how-azula-works px-8 pb-12" id="howitworks">
       {/* Decorative elements */}
       <div className="flex flex-col justify-center">
         <div className="flex flex-col items-center justify-center gap-y-2">

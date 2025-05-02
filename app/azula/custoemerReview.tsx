@@ -37,7 +37,7 @@ export default function CustomerReview() {
   };
 
   return (
-    <div className="bg-cyan-700 py-8 mx-4 rounded-2xl">
+    <div className="bg-cyan-700 py-8 mx-4 rounded-2xl" id="testimonials">
       <div className="mb-10">
         <div className="flex flex-col jusitfy-center mb-8">
           <div className="flex flex-col items-center justify-center gap-y-2">

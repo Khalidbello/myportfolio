@@ -92,7 +92,10 @@ const FAQItem = ({ faq }: { faq: FAQItem }) => {
 
 export default function FAQSection() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <section
+      className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+      id="faq"
+    >
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tight text-green-800 sm:text-4xl">
           Frequently Asked Questions
