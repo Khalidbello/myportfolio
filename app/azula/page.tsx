@@ -7,6 +7,7 @@ import Hero from "./hero";
 import FAQSection from "./faq";
 import Footer from "./footer";
 import Navbar from "./nav";
+import AzulaButtons from "./buttons";
 
 const Azula = () => {
   return (
@@ -15,6 +16,7 @@ const Azula = () => {
       <div className="w-full bg-cyan-100 text-gray-700 max-w-7xl mx-auto">
         <Hero />
         <HowAzulaWorks />
+        <AzulaButtons />
         <CustomerReview />
         <FAQSection />
         <Footer />

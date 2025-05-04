@@ -58,9 +58,7 @@ export default function CustomerReview() {
         </div>
         <div className="flex flex-col justify-center items-center relative px-2">
           <h2 className="relative inline-block text-white sm:text-xl md:text-2xl font-bold text-center border-b-[1px] border-b-white">
-            <span className="px-4">
-              What people Using Azula say about Azula
-            </span>
+            <span className="px-4">What people using Azula say</span>
             <div className="w-[10px] h-[10px] rounded-full absolute -bottom-[5px] left-0 bg-white"></div>
             <div className="w-[10px] h-[10px] rounded-full absolute -bottom-[5px] right-0 bg-white"></div>
           </h2>
