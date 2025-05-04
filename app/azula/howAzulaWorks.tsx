@@ -83,7 +83,7 @@ const FeatureCard = ({
             : "md:order-2 md:col-start-5 md:col-span-4"
         } flex flex-col items-start justify-center`}
       >
-        <h2 className="flex items-center justify-start gap-x-3 text-xl md:text-2xl mb-4 text-green-700">
+        <h2 className="flex items-center justify-start gap-x-3 text-lg font-semibold md:text-2xl mb-4 text-green-700">
           <span
             className={`${bgColor} p-3 rounded-md inline-flex items-center justify-center`}
           >
