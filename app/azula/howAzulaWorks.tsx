@@ -7,7 +7,6 @@ import {
   faRefresh,
   faHurricane,
 } from "@fortawesome/free-solid-svg-icons";
-import Spline from "@splinetool/react-spline";
 
 type FeatureCardProps = {
   title: string;
@@ -64,7 +63,7 @@ const FeatureCard = ({
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.8, // 80% visibility
+      threshold: 0.6, // 80% visibility
     });
 
     observer.observe(containerRef.current);
@@ -103,7 +102,15 @@ const FeatureCard = ({
       >
         {isVisible && splineScene && (
           <div className="w-full h-full rounded-xl">
-            <Spline scene={splineScene} />
+            <iframe
+              src={splineScene}
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              allowFullScreen
+              className="rounded-xl"
+            ></iframe>
           </div>
         )}
       </div>
@@ -113,10 +120,10 @@ const FeatureCard = ({
 
 export default function HowAzulaWorks() {
   const SCENE_URLS = {
-    heatGuide: "https://prod.spline.design/bqlWgGwP1LzbQBTE/scene.splinecode",
-    combustion: "https://prod.spline.design/bqlWgGwP1LzbQBTE/scene.splinecode",
-    airflow: "https://prod.spline.design/bqlWgGwP1LzbQBTE/scene.splinecode",
-    refueling: "https://prod.spline.design/bqlWgGwP1LzbQBTE/scene.splinecode",
+    heatGuide: "https://my.spline.design/untitled-3U3KtHcwwaIUAbBcsGS5Z8SQ/",
+    combustion: "https://my.spline.design/untitled-3U3KtHcwwaIUAbBcsGS5Z8SQ/",
+    airflow: "https://my.spline.design/untitled-3U3KtHcwwaIUAbBcsGS5Z8SQ/",
+    refueling: "https://my.spline.design/untitled-3U3KtHcwwaIUAbBcsGS5Z8SQ/",
   };
 
   return (

@@ -21,13 +21,13 @@ export default function Buy() {
         <div className="col-span-8 md:col-span-4  md:items-stretch rounded-xl bg-gray-300">
           <Image
             alt="azula image"
-            src="/azula-img.png"
+            src="/azula-img2.png"
             width={500}
             height={500}
-            className="object-cover w-full h-full rounded-xl"
+            className="object-cover md:w-full md:h-full rounded-xl"
           />
         </div>
-        <div className="col-span-8 md:col-start-5 md:col-span-4 space-y-8 bg-cyan-100 px-8 md:px-16 py-8 md:py-20 rounded-xl ">
+        <div className="col-span-8 md:col-start-5 md:col-span-4 space-y-8 bg-cyan-200 px-8 md:px-16 py-8 md:py-20 rounded-xl ">
           <div className="grid grid-cols-6">
             <div className="col-span-2 text-lg">Quantity</div>
             <div className="col-start-4 cols-span-3 inline-flex gap-x-3">
