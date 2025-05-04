@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
@@ -132,12 +133,18 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8 flex flex-col gap-4 sm:flex-row"
         >
-          <button className="rounded-lg bg-green-600 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+          <Link
+            href="/buy"
+            className="rounded-lg bg-green-600 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          >
             Get Azula Now
-          </button>
-          <button className="rounded-lg border-2 border-green-600 px-8 py-3 text-lg font-semibold text-green-600 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+          </Link>
+          <Link
+            href="#howitworks"
+            className="rounded-lg border-2 border-green-600 px-8 py-3 text-lg font-semibold text-green-600 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          >
             How It Works →
-          </button>
+          </Link>
         </motion.div>
       </div>
 

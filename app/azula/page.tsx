@@ -12,7 +12,7 @@ const Azula = () => {
   return (
     <div className="w-full h-screen bg-white overflow-auto">
       <Navbar />
-      <div className="w-full bg-cyan-50 text-gray-700 max-w-7xl mx-auto">
+      <div className="w-full bg-cyan-100 text-gray-700 max-w-7xl mx-auto">
         <Hero />
         <HowAzulaWorks />
         <CustomerReview />
