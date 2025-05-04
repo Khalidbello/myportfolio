@@ -16,7 +16,9 @@ export default function Navbar() {
         <div className="bg-white w-[96%] md:w-[90%] px-3 py-2 rounded-xl">
           <div className="flex items-center justify-between">
             <Link href="#top" className="cursor-pointer">
-              <span className="text-2xl font-bold text-green-700">AZULA</span>
+              <span className="text-2xl font-bold text-green-700 font-mono">
+                AZULA
+              </span>
             </Link>
 
             <DesktopNavigation />
