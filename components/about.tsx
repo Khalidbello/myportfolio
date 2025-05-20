@@ -45,15 +45,14 @@ const About: React.FC = () => {
               <div className="ml-3">
                 <div className="text-[2rem] text-prmry1">Hello!</div>
                 <p className="p-0 m-0">
-                  {`I'm`} Khalid Bello, a mechanical engineering student turned
-                  passionate web developer, driven by a love for solving
-                  problems and creating value. Leveraging my analytical skills,
-                  I transform complex business challenges into practical,
-                  user-focused solutions. With expertise in both front-end and
-                  back-end development, I craft efficient, scalable web
-                  applications designed to make your vision a reality. Let’s
-                  collaborate to build digital experiences that truly resonate
-                  with your audience!
+                  {`I’m Khalid Bello, a Mechanical Engineering student with
+                  first-class grades and a passion for building things—both in
+                  the lab and on the web. My engineering mindset helps me break
+                  down problems and build clean, practical solutions. I code
+                  user-friendly apps and websites that actually work, blending
+                  logic with creativity. Currently juggling studies and side
+                  projects, I love turning ideas into real digital tools. Let’s
+                  make something great together!`}
                 </p>
               </div>
               <div className="text-prmry2">{`<p>`}</div>
