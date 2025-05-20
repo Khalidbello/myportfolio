@@ -15,6 +15,21 @@ const Contact: React.FC = () => {
   const [success, setSuccess] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
+  const formatDate = () => {
+    const now = new Date();
+
+    const day = String(now.getDate()).padStart(2, "0");
+    const month = String(now.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
+    const year = now.getFullYear();
+
+    let hours = now.getHours();
+    const ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Convert 0 to 12
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+
+    return `${day}-${month}-${year}, ${hours}:${minutes} ${ampm}`;
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -183,6 +198,8 @@ const Contact: React.FC = () => {
                 )}
               </button>
             </motion.div>
+            <input name="time" type="hidden" value={formatDate()} />
+            <input name="title" type="hidden" value="From portfolio" />
           </motion.form>
         </div>
       </div>
