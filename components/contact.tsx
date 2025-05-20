@@ -4,46 +4,75 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Topper from "./topper";
 import TopperText from "./topper-text";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "@/utils/motion";
 
 const Contact: React.FC = () => {
-  const [error, showError] = useState<string>("");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [error, setError] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  // function to handle form field change
-  const onChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    showError("");
-    const { name, value } = e.target;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    setSuccess(false);
 
-    if (!formData.name) return showError("Please fill enter name..");
-    if (!formData.email) return showError("Please fill enter email..");
-    if (!formData.message) return showError("Please fill enter message..");
+    const form = formRef.current;
+    if (!form) return;
 
-    const mailtoLink = `mailto:bellokhalid74@gmail.com?subject=Message from ${encodeURIComponent(
-      formData.name
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    )}`;
-    window.location.href = mailtoLink;
+    // Basic validation
+    const formData = new FormData(form);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    if (!name.trim()) {
+      setError("Please enter your name");
+      setIsLoading(false);
+      return;
+    }
+    if (!email.trim()) {
+      setError("Please enter your email");
+      setIsLoading(false);
+      return;
+    }
+    if (!message.trim()) {
+      setError("Please enter your message");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      setSuccess(true);
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      setError("Failed to send message. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <div id="contact" className="relative bg-bg2 w-full">
+    <motion.div
+      id="contact"
+      className="relative bg-bg2 w-full"
+      variants={staggerContainer(0.1, 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="py-20">
         <Topper />
         <TopperText
@@ -51,14 +80,26 @@ const Contact: React.FC = () => {
           note={`Hit me up let's talk about the next big thing`}
         />
         <div className="mt-16 px-8">
-          <h2 className="text-center mb-10">
+          <motion.h2
+            className="text-center mb-10"
+            variants={fadeIn("up", "spring", 0.2, 1.4)}
+          >
             <span className="px-4 py-2 border-[2px] border-prmry2 text-prmry1 font-mono rounded-tl-[1rem] rounded-br-[1rem]">
               Send Me A Message
             </span>
-          </h2>
-          <form onSubmit={handleSubmit} className="block max-w-xl mx-auto">
+          </motion.h2>
+
+          <motion.form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="block max-w-xl mx-auto"
+            variants={fadeIn("up", "spring", 0.4, 1.4)}
+          >
             <div className="flex items-center justify-between flex-grow gap-x-10 mb-8">
-              <div className="flex flex-col items-start justify-start gap-y-2 w-[46%]">
+              <motion.div
+                className="flex flex-col items-start justify-start gap-y-2 w-[46%]"
+                variants={fadeIn("right", "spring", 0.2, 1.4)}
+              >
                 <label htmlFor="name" className="text-sm text-prmry1">
                   Your name *
                 </label>
@@ -66,53 +107,84 @@ const Contact: React.FC = () => {
                   id="name"
                   name="name"
                   type="text"
-                  onChange={onChange}
+                  required
                   placeholder="Enter your name"
-                  className="w-full px-4 bg-transparent border-b-[2px] border-b-prmry2 text-sm"
+                  className="w-full px-4 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
                 />
-              </div>
-              <div className="flex flex-col items-start justify-start gap-y-2 w-[46%]">
+              </motion.div>
+
+              <motion.div
+                className="flex flex-col items-start justify-start gap-y-2 w-[46%]"
+                variants={fadeIn("left", "spring", 0.2, 1)}
+              >
                 <label htmlFor="email" className="text-sm text-prmry1">
                   Email *
                 </label>
                 <input
                   id="email"
                   name="email"
-                  type="text"
-                  onChange={onChange}
+                  type="email"
+                  required
                   placeholder="Enter your email"
-                  className="w-full px-4 bg-transparent border-b-[2px] border-b-prmry2 text-sm"
+                  className="w-full px-4 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
                 />
-              </div>
+              </motion.div>
             </div>
-            <div className="flex flex-col items-start justify-start gap-y-2 mb-4">
+
+            <motion.div
+              className="flex flex-col items-start justify-start gap-y-2 mb-4"
+              variants={fadeIn("up", "spring", 0.3, 1.4)}
+            >
               <label htmlFor="message" className="text-sm text-prmry1">
                 Your message *
               </label>
               <textarea
                 id="message"
                 name="message"
+                required
                 placeholder="Enter your needs"
-                onChange={onChange}
-                className="h-[3.5rem] w-full px-4 py-1 bg-transparent border-b-[2px] border-b-prmry2 text-sm"
+                className="min-h-[3.5rem] w-full px-4 py-1 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
               ></textarea>
-            </div>
+            </motion.div>
+
             {error && (
-              <p className="text-red-500 text-sm text-center mb-2">{error}</p>
+              <motion.p
+                className="text-red-500 text-sm text-center mb-2"
+                variants={fadeIn("up", "spring", 0.4, 1.4)}
+              >
+                {error}
+              </motion.p>
             )}
-            <div className="flex items-center justify-center">
-              <button className="px-4 py-2 rounded-full bg-prmry1 text-gray-800 flex items-center justify-center gap-3">
-                Send{" "}
-                <FontAwesomeIcon
-                  icon={faPaperPlane}
-                  className="w-5 h-5 text-gray-800"
-                />
+
+            {success && (
+              <motion.p
+                className="text-green-500 text-sm text-center mb-2"
+                variants={fadeIn("up", "spring", 0.4, 1.4)}
+              >
+                Message sent successfully!
+              </motion.p>
+            )}
+
+            <motion.div className="flex items-center justify-center">
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="px-6 py-2 rounded-full bg-prmry1 text-gray-800 flex items-center justify-center gap-3 hover:bg-prmry2 hover:text-white transition-colors disabled:opacity-50"
+              >
+                {isLoading ? (
+                  "Sending..."
+                ) : (
+                  <>
+                    Send{" "}
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5" />
+                  </>
+                )}
               </button>
-            </div>
-          </form>
+            </motion.div>
+          </motion.form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
