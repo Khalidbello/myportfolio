@@ -165,21 +165,13 @@ const Contact: React.FC = () => {
             </motion.div>
 
             {error && (
-              <motion.p
-                className="text-red-500 text-sm text-center mb-2"
-                variants={fadeIn("up", "spring", 0.4, 1.4)}
-              >
-                {error}
-              </motion.p>
+              <p className="text-red-500 text-sm text-center mb-2">{error}</p>
             )}
 
             {success && (
-              <motion.p
-                className="text-green-500 text-sm text-center mb-2"
-                variants={fadeIn("up", "spring", 0.4, 1.4)}
-              >
+              <p className="text-green-500 text-sm text-center mb-2">
                 Message sent successfully!
-              </motion.p>
+              </p>
             )}
 
             <motion.div className="flex items-center justify-center w-full">
