@@ -67,24 +67,26 @@ const Contact: React.FC = () => {
   return (
     <motion.div
       id="contact"
-      className="relative bg-bg2 w-full"
+      className="relative bg-bg2 w-full overflow-x-hidden" // Added overflow-x-hidden
       variants={staggerContainer(0.1, 0.2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="py-20">
+      <div className="py-20 w-full max-w-[100vw] mx-auto px-4 sm:px-8">
+        {" "}
+        {/* Added max-w and responsive padding */}
         <Topper />
         <TopperText
           head={"Contact"}
           note={`Hit me up let's talk about the next big thing`}
         />
-        <div className="mt-16 px-8">
+        <div className="mt-16 w-full">
           <motion.h2
             className="text-center mb-10"
             variants={fadeIn("up", "spring", 0.2, 1.4)}
           >
-            <span className="px-4 py-2 border-[2px] border-prmry2 text-prmry1 font-mono rounded-tl-[1rem] rounded-br-[1rem]">
+            <span className="inline-block px-4 py-2 border-[2px] border-prmry2 text-prmry1 font-mono rounded-tl-[1rem] rounded-br-[1rem]">
               Send Me A Message
             </span>
           </motion.h2>
@@ -92,12 +94,12 @@ const Contact: React.FC = () => {
           <motion.form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="block max-w-xl mx-auto"
+            className="w-full max-w-xl mx-auto"
             variants={fadeIn("up", "spring", 0.4, 1.4)}
           >
-            <div className="flex items-center justify-between flex-grow gap-x-10 mb-8">
+            <div className="flex flex-col sm:flex-row items-stretch justify-between gap-6 mb-8 w-full">
               <motion.div
-                className="flex flex-col items-start justify-start gap-y-2 w-[46%]"
+                className="flex flex-col items-start justify-start gap-y-2 w-full sm:w-[48%]"
                 variants={fadeIn("right", "spring", 0.2, 1.4)}
               >
                 <label htmlFor="name" className="text-sm text-prmry1">
@@ -114,7 +116,7 @@ const Contact: React.FC = () => {
               </motion.div>
 
               <motion.div
-                className="flex flex-col items-start justify-start gap-y-2 w-[46%]"
+                className="flex flex-col items-start justify-start gap-y-2 w-full sm:w-[48%]"
                 variants={fadeIn("left", "spring", 0.2, 1)}
               >
                 <label htmlFor="email" className="text-sm text-prmry1">
@@ -132,7 +134,7 @@ const Contact: React.FC = () => {
             </div>
 
             <motion.div
-              className="flex flex-col items-start justify-start gap-y-2 mb-4"
+              className="flex flex-col items-start justify-start gap-y-2 mb-4 w-full"
               variants={fadeIn("up", "spring", 0.3, 1.4)}
             >
               <label htmlFor="message" className="text-sm text-prmry1">
@@ -143,7 +145,7 @@ const Contact: React.FC = () => {
                 name="message"
                 required
                 placeholder="Enter your needs"
-                className="min-h-[3.5rem] w-full px-4 py-1 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
+                className="w-full min-h-[3.5rem] px-4 py-1 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
               ></textarea>
             </motion.div>
 
@@ -165,7 +167,7 @@ const Contact: React.FC = () => {
               </motion.p>
             )}
 
-            <motion.div className="flex items-center justify-center">
+            <motion.div className="flex items-center justify-center w-full">
               <button
                 type="submit"
                 disabled={isLoading}
