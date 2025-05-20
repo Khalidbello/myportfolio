@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                   type="text"
                   required
                   placeholder="Enter your name"
-                  className="w-full px-4 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
+                  className="w-full px-4 py-2 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
                 />
               </motion.div>
 
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                   type="email"
                   required
                   placeholder="Enter your email"
-                  className="w-full px-4 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
+                  className="w-full px-4 py-2 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
                 />
               </motion.div>
             </div>
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                 name="message"
                 required
                 placeholder="Enter your needs"
-                className="w-full min-h-[3.5rem] px-4 py-1 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
+                className="w-full min-h-[3.5rem] px-4 py-2 bg-transparent border-b-[2px] border-b-prmry2 text-sm focus:outline-none focus:border-prmry1 transition-colors"
               ></textarea>
             </motion.div>
 
