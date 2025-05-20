@@ -13,7 +13,7 @@ import Image, { StaticImageData } from "next/image";
 
 import botSubImg from "@/public/botsub-img.png";
 import botSubAdminImg from "@/public/botsub-admin.png";
-import azulaImg from "@/public/azula-img.png";
+import azulaImg from "@/public/azula.png";
 import theLogicRoomImg from "@/public/the-logic-room.png";
 import sabiqFarmImg from "@/public/sabiq-farm.png";
 
@@ -157,32 +157,28 @@ const members = [
   {
     image: botSubImg,
     link: "https://botsub.vercel.app",
-    info: "BotSub – Developed and launched a conversational Facebook and WhatsApp bot enabling users to purchase airtime and data seamlessly, even in free mode. As the founder and sole developer, I architected the system from scratch, growing the user base to 400+ active customers",
+    info: "BotSub – Developed and launched a conversational Facebook and WhatsApp bot enabling users to purchase airtime and data seamlessly, even in free mode. As the founder and sole developer, I architected the system from scratch, growing the user base to 400+ active customers.",
   },
   {
     image: botSubAdminImg,
     link: "https://botsub.vercel.app/admin",
-    info: "BotSub Admin – Designed an intuitive admin dashboard to streamline customer management, issue resolution, and growth analytics, empowering non-technical team members to oversee operations efficiently",
+    info: "BotSub Admin – Designed an intuitive admin dashboard to streamline customer management, issue resolution, and growth analytics, empowering non-technical team members to oversee operations efficiently.",
   },
   {
     image: azulaImg,
     link: "https://codenojutsu.vercel.app/azula",
-    info: "Azula – Created a dynamic product page featuring a web-compatible 3D model for an improved charcoal stove, blending interactive design with persuasive storytelling.",
+    info: "Azula – Created a dynamic product page featuring a web compatible 3D model for an improved charcoal stove, blending interactive design with persuasive storytelling.",
   },
   {
     image: theLogicRoomImg,
     link: "https://www.thelogicroominnovation.com/",
-    info: "The Logic Room – Built as a frontend developer during my internship at Tech-Reyal, this business landing page prioritized clean design and responsive functionality to enhance user engagement",
+    info: "The Logic Room – Built as a frontend developer during my internship at Tech-Reyal, this business landing page prioritized clean design and responsive functionality to enhance user engagement.",
   },
-  {
-    image: azulaImg,
-    link: "https://codenojutsu.vercel.app/azula",
-    info: "Azula – Created a dynamic product page featuring a web-compatible 3D model for an improved charcoal stove, blending interactive design with persuasive storytelling.",
-  },
+
   {
     image: sabiqFarmImg,
     link: "https://sabiqfarm.vercel.app/",
-    info: "SabiqFarm – Delivered a grant-focused landing page for a peer’s agricultural initiative, optimizing conversion through clear value propositions and seamless UX.",
+    info: "SabiqFarm – Designed a clean, effective website to help a friend apply for an agriculture grant—making their pitch stand out.",
   },
 ];
 
