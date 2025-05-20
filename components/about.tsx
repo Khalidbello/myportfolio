@@ -35,8 +35,8 @@ const About: React.FC = () => {
           </div>
         </div>
         <Topper />
-        <div className="flex flex-col about-break:flex-row items-center about-break:items-stretch justify-center gap-x-10 gap-y-14 mt-16 px-8 max-w-screen-lg mx-auto">
-          <div className="max-w-[30rem] min-w-[10rem]">
+        <div className="grid grid-cols-1 justify-center gap-x-10 gap-y-14 mt-16 px-8 mx-auto max-w-4xl">
+          <div className="col-span-1">
             <h2 className="bg-bg1 mb-3 p-2 px-4 inline-block text-[1rem] font-mono rounded-tl-[1rem] rounded-br-[1rem] border-[2px] border-prmry2">
               About Me
             </h2>
@@ -46,7 +46,7 @@ const About: React.FC = () => {
                 <div className="text-[2rem] text-prmry1">Hello!</div>
                 <p className="p-0 m-0">
                   {`I’m Khalid Bello, a Mechanical Engineering student with
-                  first-class grades and a passion for building things—both in
+                  first-class grades and a passion for building things both in
                   the lab and on the web. My engineering mindset helps me break
                   down problems and build clean, practical solutions. I code
                   user-friendly apps and websites that actually work, blending
@@ -58,7 +58,7 @@ const About: React.FC = () => {
               <div className="text-prmry2">{`<p>`}</div>
             </div>
           </div>
-          <div className="relative bg-gray-900 w-full max-w-[30rem] about-break:min-w-[18rem]  rounded-xl">
+          <div className="relative bg-gray-900 w-full about-break:min-w-[18rem]  rounded-xl">
             <Image
               src={"/h-art.png"}
               alt="art by historia

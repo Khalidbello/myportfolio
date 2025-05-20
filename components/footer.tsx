@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     <div className="w-full flex flex-wrap justify-evenly items-center gap-x-10 gap-y-6 bg-bg1 border-t-[1px] border-t-gray-700 py-3 px-5">
       <p>
         <FontAwesomeIcon icon={faCopyright} className="w-5 h-5 text-gray-300" />{" "}
-        2024 CodeNoJutsu All Right Reserved.
+        © {new Date().getFullYear()} CodeNoJutsu All Right Reserved.
       </p>
       <div className="inline-flex items-center justify-between gap-5">
         <a
